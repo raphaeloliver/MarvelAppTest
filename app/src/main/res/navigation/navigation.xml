@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/marvelListFragment">
+
+    <fragment
+        android:id="@+id/marvelListFragment"
+        android:name="com.example.marvelApp.ui.marvelList.MarvelListFragment"
+        android:label="MarvelListFragment" >
+        <action
+            android:id="@+id/action_marvelListFragment_to_marvelDetailFragment"
+            app:destination="@id/marvelDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marvelDetailFragment"
+        android:name="com.example.marvelApp.ui.marvelDetail.MarvelDetailFragment"
+        android:label="MarvelDetailFragment" >
+        <argument
+            android:name="characterSelected"
+            app:argType="com.example.marvelApp.data.model.Character" />
+    </fragment>
+</navigation>
